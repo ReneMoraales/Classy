@@ -1,0 +1,15 @@
+<template name="splashLayout">
+  {{> splashLoginModal}}
+  {{> splashSignupModal}}
+
+  <div id="splash" class="layout">
+    <div class="splash-content">
+      <h1 class="hidden">Classy</h1>
+      <p class="lead hidden">Conéctate con tus profesores y encuentra todas las actividades, tareas, apuntes y materiales de tus clases en un sólo lugar.</p>
+      <div class="actions hidden">
+        <button data-classy-toggle="modal" data-classy-target="#splashSignupModal" id="splashSignupButton" class="splash-button">Registrarme</button>
+        <button data-classy-toggle="modal" data-classy-target="#splashLoginModal" id="splashLoginButton" class="splash-button outlined">Iniciar sesión</button>
+      </div>
+    </div>
+  </div>
+</template>

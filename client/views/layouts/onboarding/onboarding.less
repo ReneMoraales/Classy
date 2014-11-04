@@ -1,0 +1,76 @@
+#onboarding {
+  .cl-header {
+    box-shadow: inset 0px 20px black;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+#onboardingPicture, #onboardingClass {
+  .cl-content {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+#onboardingPicture .cl-content {
+  .greeting {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .picture-lead {
+    line-height: 20px;
+    font-size: 15px;
+    margin: 12px 0;
+  }
+
+  .picture-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: whitesmoke;
+    background-image: url(/images/user-transparent.png);
+    margin: 10px 0 25px;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: 50% 30px;
+    cursor: pointer;
+    border: none;
+    font-size: 0;
+    outline: none;
+
+    &.not-empty {
+      background-size: cover;
+      background-position: center;
+
+      &:before {
+        font-size: 0;
+      }
+    }
+
+    &:before {
+      content: "Elegir imagen...";
+      line-height: 185px;
+      font-size: 16px;
+      font-weight: 500;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+
+    &:active {
+      box-shadow: inset 0px 180px rgba(0,0,0,.1);
+    }
+  }
+
+  .skip-this-step {
+    display: block;
+  }
+}
+
+#onboardingClass {
+  .cl-form {
+    margin-top: 20px;
+  }
+}

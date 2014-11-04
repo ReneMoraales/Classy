@@ -1,5 +1,11 @@
 <template name="appLayout">
+  {{> appMenu}}
 
-{{> yield}}
-
+  <div id="app" class="layout">
+    {{> appHeader}}
+    {{> appNavigation}}
+    <div id="appContent" class="cl-content">
+      {{> yield}}
+    </div>
+  </div>
 </template>

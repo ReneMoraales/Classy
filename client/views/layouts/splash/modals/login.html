@@ -1,11 +1,23 @@
 <template name="splashLoginModal">
   <div id="splashLoginModal" class="cl-modal">
-    <div class="cl-modal-header">
-      <a href="#" class="cl-modal-close">Volver</a>
+    <div class="cl-header">
+      <a href="#" class="cl-header-back cl-modal-close">Volver</a>
       <h2>Iniciar sesión</h2>
     </div>
     <div class="cl-modal-content">
-    formulario ql
+      <div class="login-lead">Ingresa tu dirección de correo electrónico y contraseña para iniciar sesión en Classy.</div>
+      <form class="cl-form" id="userLoginForm">
+        <div class="cl-input-control large">
+          <i class="ioscon ioscon-mail"></i>
+          <input type="email" class="input-text" name="loginEmail" placeholder="Correo electrónico" required>
+        </div>
+        <div class="cl-input-control large">
+          <i class="ioscon ioscon-key"></i>
+          <input type="password" class="input-text" name="loginPassword" placeholder="Contraseña" required>
+        </div>
+        <button type="submit" class="cl-btn cl-btn-green cl-btn-large">Iniciar sesión</button>
+        <a id="forgotPassword" href="#">Olvidé mi contraseña</a>
+      </form>
     </div>
   </div>
 </template>

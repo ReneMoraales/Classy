@@ -1,22 +1,22 @@
 <template name="splashSignupModal">
   <div id="splashSignupModal" class="cl-modal">
-    <div class="cl-modal-header">
-      <a href="#" class="cl-modal-close">Volver</a>
+    <div class="cl-header">
+      <a href="#" class="cl-header-back cl-modal-close">Volver</a>
       <h2>Registrarse</h2>
     </div>
     <div class="cl-modal-content">
       <div class="alert"><strong>¿Eres padre y/o tutor?</strong> Para crear tu cuenta, utiliza el enlace que te será proporcionado por el Profesor. <a href="#">Más información...</a></div>
-      <form class="cl-form" id="userSignupForm">
+      <form id="userSignupForm" class="cl-form">
         <div id="signupTypeChoice">
           <div class="choice">
-            <input checked="checked" type="radio" name="profile.userType" value="student" id="signupTypeStudent">
+            <input checked="checked" type="radio" name="profile[userType]" value="student" id="signupTypeStudent">
             <label for="signupTypeStudent">
               <div class="icon"><i class="fa fa-graduation-cap"></i></div>
               <div>Estudiante</div>
             </label>
           </div>
           <div class="choice">
-            <input type="radio" name="profile.userType" value="teacher" id="signupTypeTeacher">
+            <input type="radio" name="profile[userType]" value="teacher" id="signupTypeTeacher">
             <label for="signupTypeTeacher">
               <div class="icon"><i class="ioscon ioscon-glasses"></i></div>
               <div>Profesor</div>
@@ -25,21 +25,18 @@
         </div>
         <div class="cl-input-control large">
           <i class="ioscon ioscon-user"></i>
-          <input type="text" class="input-text" name="profile.name" placeholder="Nombre completo">
+          <input type="text" class="input-text" name="profile[name]" placeholder="Nombre completo" required>
         </div>
         <div class="cl-input-control large">
           <i class="ioscon ioscon-mail"></i>
-          <input type="email" class="input-text" name="email" placeholder="Correo electrónico">
+          <input type="email" class="input-text" name="signupEmail" placeholder="Correo electrónico" required>
         </div>
         <div class="cl-input-control large">
           <i class="ioscon ioscon-key"></i>
-          <input type="password" class="input-text" name="password" placeholder="Contraseña">
-        </div>
-        <div class="cl-input-control large">
-          <input type="password" class="input-text" name="passwordConfirm" placeholder="Repetir contraseña">
+          <input type="password" class="input-text" name="signupPassword" placeholder="Contraseña" required>
         </div>
         <div class="signup-disclaimer">Al crear tu cuenta, estás aceptando los <a href="#">Términos del Servicio</a> y la <a href="#">Política de Privacidad</a> de Classy.</div>
-        <button id="signupSubmit" type="submit" class="cl-btn cl-btn-green cl-btn-large">Crear mi cuenta</button>
+        <button type="submit" class="cl-btn cl-btn-green cl-btn-large">Crear mi cuenta</button>
       </form>
     </div>
   </div>

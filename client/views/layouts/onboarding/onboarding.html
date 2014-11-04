@@ -1,0 +1,35 @@
+<template name="onboardingLayout">
+  <div class="layout" id="onboarding">
+    <div id="onboardingPicture" class="layout-screen" data-screen="1">
+      <div class="cl-header">
+        <h2>Bienvenido</h2>
+        <a data-go-screen="forward" href="#" style="display: none;" class="cl-header-forward">Continuar</a>
+      </div>
+      <div class="cl-content">
+        <div class="greeting">Bienvenido a Classy,<br>{{currentUser.profile.name}}.</div>
+        <div class="picture-lead">Sube una foto de perfil para que otros puedan reconocerte más fácilmente.</div>
+        <input id="onboardingPictureInput" type="file" class="picture-image">
+        <a data-go-screen="forward" class="skip-this-step" href="#">Saltarme este paso</a>
+      </div>
+    </div>
+    <div id="onboardingClass" class="layout-screen future" data-screen="2">
+      <div class="cl-header">
+        <a data-go-screen="back" href="#" class="cl-header-back">Volver</a>
+        <h2>Mis clases</h2>
+        <a data-go-screen="forward" href="#" class="cl-header-forward">Finalizar</a>
+      </div>
+      <div class="cl-content">
+        <div>Crea tu primera clase como profesor para comenzar a utilizar Classy.</div>
+        <form class="cl-form" id="onboardingClassCreateForm">
+          <div class="cl-input-control">
+            <input type="text" class="input-text" name="className" placeholder="Nombre de la asignatura" required>
+          </div>
+          <div class="cl-input-control">
+            <label for="classEndDate">Último día de clases</label>
+            <input type="date" class="input-text" name="classEndDate" required>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
